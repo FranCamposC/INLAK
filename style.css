@@ -1,0 +1,489 @@
+/* Importamos la fuente Montserrat con pesos 400, 700 y 900 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;  /* Fondo oscuro/negro */
+  color: #fff;             /* Texto principal en blanco */
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------- NAV / MENÚ SUPERIOR ------------------- */
+nav {
+  width: 100%;
+  background-color: #000;               /* Menú en negro */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  position: sticky;                     /* Se queda fijo al hacer scroll */
+  top: 0;
+  z-index: 999;
+}
+
+.nav2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  margin-right: auto;
+  display: flex;           /* Asegura que logo e INLAK estén centrados verticalmente */
+  align-items: center;
+}
+
+.logo-img {
+  width: 80px;
+  height: auto;
+}
+
+.logo-text {
+  margin-left: 8px;
+  font-size: 35px;
+  color: #fff;
+}
+
+.navItem {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.navItem:hover {
+  color: #a40102;  /* Rojo al hacer hover */
+}
+
+/* ------------------- SECCIÓN "ABOUT" (PORTADA) ------------------- */
+#about {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;     /* Para que se adapte en pantallas pequeñas */
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #000;  /* Fondo negro */
+}
+
+.aboutBox {
+  flex: 1 1 400px;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.aboutBox .title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #a40102;      /* Títulos en blanco */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.aboutBox p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;      /* Texto secundario gris */
+  margin-bottom: 1rem;
+}
+
+.mainImage {
+  flex: 1 1 400px;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+/* ------------------- SECCIÓN "SERVICIOS" ------------------- */
+#services {
+  width: 100%;
+  margin: 2rem auto;
+  max-width: 1200px;
+  background-color: #000; /* Fondo oscuro */
+}
+
+.main2 {
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.main2 .title {
+  font-size: 1.8rem;
+  color: #a40102;          /* Título en blanco */
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.line-break {
+  height: 2px;
+  width: 60px;
+  background-color: #a40102;  /* Franja divisoria en rojo */
+  margin: 1rem auto 2rem auto;
+  border-radius: 1px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.gallery {
+  background-color: #111;  /* Cartas en gris muy oscuro */
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.gallery:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.image {
+  width: 100%;
+  height: 325px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery h4 {
+  font-size: 1.1rem;
+  color: #a40102;    /* Encabezados de servicio en rojo */
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+.gallery p {
+  font-size: 0.9rem;
+  color: #ccc;       /* Texto de servicio en gris claro */
+  margin: 0 1rem 1rem 1rem;
+  line-height: 1.4;
+}
+
+/* ------------------- SECCIÓN "TEAM" ------------------- */
+#team {
+  width: 100%;
+  margin: 2rem auto;
+  max-width: 1200px;
+  background-color: #000; /* Fondo oscuro */
+  text-align: center;
+}
+
+#team .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+#team .title {
+  color:#a40102;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+#team .gallery {
+  max-width: 400px;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+#team .image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ------------------- TESTIMONIOS (CARRUSEL) ------------------- */
+.testimonials {
+  background-color: #000;  /* Fondo oscuro */
+  padding: 2rem 1rem;
+}
+
+.testimonial-carousel {
+  width: 90%;
+  max-width: 700px;
+  margin: 2rem auto;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  min-height: 180px;
+}
+
+.testimonial {
+  display: none;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 20px;
+  background: #111;
+  border-left: 4px solid #a40102; /* Borde rojo */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  margin: 0 auto;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  max-width: 600px;
+}
+
+.testimonial.active {
+  display: block;
+  opacity: 1;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #a40102;  /* Nombre en rojo */
+}
+
+/* ------------------- SECCIÓN "RESERVAR CITA" ------------------- */
+#reservar {
+  background: #a40102; /* Fondo rojo para destacar */
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.reservar-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#reservar .title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#reservar p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.btn-reservar {
+  display: inline-flex;
+  align-items: center;
+  background: #25D366; /* Verde WhatsApp */
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-reservar i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.btn-reservar:hover {
+  background: #1ebe5d;
+}
+
+/* ------------------- SECCIÓN "UBICACIÓN" ------------------- */
+#ubicacion {
+  text-align: center;
+  background: #111;       /* Un gris muy oscuro */
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.ubicacion-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#ubicacion .title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #a40102;
+}
+
+#ubicacion p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.map-container {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* ------------------- FOOTER ------------------- */
+footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+footer span a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+footer h5 {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+footer h3 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.sMedia {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.sMedia a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.sMedia a:hover {
+  color: #a40102;
+}
+
+.footerItem {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ------------------- BOTONES GENÉRICOS ------------------- */
+.button1 {
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  background: #a40102; /* Botón rojo */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button1:hover {
+  background: #8a0101;
+}
+
+/* ------------------- LISTAS CON BULLETS ROJOS ------------------- */
+ul {
+  margin: 1rem 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #ccc;
+}
+
+ul li::before {
+  /* Usa un ícono de Font Awesome como bullet (necesitas tenerlo cargado) */
+  content: "\f061"; /* ícono 'fa-arrow-right' por ejemplo */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #a40102;   /* Bullet en rojo */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+@media only screen and (max-width: 850px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .aboutBox {
+    margin: 0 0 1rem 0;
+  }
+  .mainImage {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navItem {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+  .gallery h4 {
+    font-size: 1rem;
+  }
+  .gallery p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Ajuste de reservar en pantallas pequeñas */
+@media (max-width: 768px) {
+  #reservar {
+    padding: 2rem 1rem;
+  }
+  
+  .btn-reservar {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
